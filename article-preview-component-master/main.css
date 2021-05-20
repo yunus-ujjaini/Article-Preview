@@ -1,0 +1,442 @@
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --VeryDarkGrayishBlue: #48556a;
+  --DesaturatedDarkBlue: #6d7f97;
+  --GrayishBlue: #9eafc2;
+  --LightGrayishBlue: #ecf2f8;
+  --white:#ffffff;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  height: auto;
+  width: 100vw;
+  background-color: var(--LightGrayishBlue);
+}
+
+.card {
+  margin: auto 2rem;
+  border-radius: 10px;
+  background-color: white;
+  max-width: 800px;
+  height: 20rem;
+  max-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 40%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.card-text {
+  position: relative;
+  height: inherit;
+  padding: 8rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.card-text .head {
+  font-size: 1.5rem;
+  color: var(--VeryDarkGrayishBlue);
+  font-weight: bolder;
+}
+
+.card-text .content {
+  margin: 0.5rem 0rem;
+  color: var(--DesaturatedDarkBlue);
+}
+
+.card-text .action {
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  -webkit-animation: scaleup 0.2s 1 forwards;
+          animation: scaleup 0.2s 1 forwards;
+  margin: 0.5rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-text .action .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-text .action .profile .prof-img img {
+  height: 3rem;
+  width: auto;
+  border-radius: 50%;
+}
+
+.card-text .action .profile .prof-details {
+  margin: auto 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card-text .action .profile .prof-details .join-date {
+  color: var(--DesaturatedDarkBlue);
+}
+
+.card-text .action .share-card {
+  position: relative;
+}
+
+.card-text .action .share {
+  background-color: var(--LightGrayishBlue);
+  padding: 0.5rem;
+  border-radius: 50%;
+  -webkit-transition: all;
+  transition: all;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.card-text .action .share-content {
+  border-radius: 10px;
+  width: 15rem;
+  color: var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--VeryDarkGrayishBlue);
+  position: absolute;
+  bottom: 150%;
+  -webkit-transform: translateX(-44%);
+          transform: translateX(-44%);
+  padding: 1rem 1rem;
+  display: none;
+}
+
+.card-text .action .share-content .shareName {
+  color: var(--GrayishBlue);
+  letter-spacing: 0.5ch;
+}
+
+.card-text .action .share-content .comp:hover {
+  cursor: pointer;
+}
+
+.card-text .action .share-content .comp:hover svg path {
+  fill: var(--GrayishBlue);
+}
+
+.card-text .action .share-card-open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card-text .action .share-icon-focussed {
+  cursor: pointer;
+  background-color: var(--DesaturatedDarkBlue);
+}
+
+.card-text .action .share-icon-focussed .img path {
+  fill: var(--white);
+}
+
+.card-text .action .share-content::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent;
+  border-top-color: var(--VeryDarkGrayishBlue);
+}
+
+.card-text .action .share:hover {
+  cursor: pointer;
+  background-color: var(--DesaturatedDarkBlue);
+}
+
+.card-text .action .share:hover .img path {
+  fill: var(--white);
+}
+
+.card-text .share-content-mob {
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  position: absolute;
+  -webkit-animation: scaleup 0.2s 1 forwards;
+          animation: scaleup 0.2s 1 forwards;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: 0rem 0rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 3vw;
+  padding: 4vw 2vw;
+  color: var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--VeryDarkGrayishBlue);
+  display: none;
+}
+
+.card-text .share-content-mob .comps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 2vw;
+}
+
+.card-text .share-content-mob .comps .comp {
+  padding: 0px 2vw;
+}
+
+.card-text .share-content-mob .comps .shareName {
+  color: var(--GrayishBlue);
+  letter-spacing: 0.5ch;
+  margin-top: -4px;
+}
+
+.card-text .share-content-mob .sharecomp {
+  background-color: var(--GrayishBlue);
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 8vw;
+  width: 8vw;
+  margin-right: 5vw;
+  margin-top: -5px;
+}
+
+.prof-name {
+  color: var(--VeryDarkGrayishBlue);
+}
+
+@-webkit-keyframes scaleup {
+  0% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@keyframes scaleup {
+  0% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@media only screen and (max-device-width: 850px) {
+  .container {
+    padding: 2rem 0px;
+    min-height: 100vh;
+    height: auto;
+    width: 100vw;
+  }
+  .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 90vw;
+    height: auto;
+    max-height: none;
+  }
+  .card-img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    min-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+  .card-text {
+    padding: 0rem 1rem;
+    padding-top: 1rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .card-text .head {
+    font-size: 4vw;
+  }
+  .card-text .content {
+    font-size: 3vw;
+  }
+  .card-text .action {
+    width: inherit;
+  }
+  .card-text .action .profile .prof-img img {
+    height: 3rem;
+    width: auto;
+    border-radius: 50%;
+  }
+  .card-text .action .profile .prof-details .join-date {
+    font-size: 3vw;
+    color: var(--DesaturatedDarkBlue);
+  }
+  .card-text .action .share {
+    background-color: var(--LightGrayishBlue);
+    padding: 3vw;
+    border-radius: 50%;
+  }
+  .card-text .action .share-card-open {
+    display: none;
+  }
+  .card-text .action .share-icon-focussed {
+    cursor: pointer;
+    background-color: var(--LightGrayishBlue);
+  }
+  .card-text .action .share-icon-focussed .img path {
+    fill: var(--GrayishBlue);
+  }
+  .card-text .share-content-mob {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .card-text .hidemobcard {
+    display: none;
+  }
+  .card-text .hidemobcomp {
+    visibility: hidden;
+  }
+  .prof-name {
+    font-size: 3.5vw;
+    color: var(--VeryDarkGrayishBlue);
+  }
+}
+/*# sourceMappingURL=main.css.map */
